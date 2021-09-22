@@ -44,10 +44,11 @@
             this.txtnombres = new System.Windows.Forms.TextBox();
             this.txtapellidos = new System.Windows.Forms.TextBox();
             this.txtnit = new System.Windows.Forms.TextBox();
-            this.txtncuenta = new System.Windows.Forms.TextBox();
+            this.txtletrascuenta = new System.Windows.Forms.TextBox();
             this.txtmontocuenta = new System.Windows.Forms.TextBox();
             this.cmbtcuenta = new System.Windows.Forms.ComboBox();
             this.cmbsucursal = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcuentas)).BeginInit();
             this.SuspendLayout();
@@ -126,10 +127,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.cmbsucursal);
             this.groupBox1.Controls.Add(this.cmbtcuenta);
             this.groupBox1.Controls.Add(this.txtmontocuenta);
-            this.groupBox1.Controls.Add(this.txtncuenta);
+            this.groupBox1.Controls.Add(this.txtletrascuenta);
             this.groupBox1.Controls.Add(this.txtnit);
             this.groupBox1.Controls.Add(this.txtapellidos);
             this.groupBox1.Controls.Add(this.txtnombres);
@@ -203,12 +205,14 @@
             this.txtnit.Size = new System.Drawing.Size(224, 20);
             this.txtnit.TabIndex = 11;
             // 
-            // txtncuenta
+            // txtletrascuenta
             // 
-            this.txtncuenta.Location = new System.Drawing.Point(431, 54);
-            this.txtncuenta.Name = "txtncuenta";
-            this.txtncuenta.Size = new System.Drawing.Size(155, 20);
-            this.txtncuenta.TabIndex = 12;
+            this.txtletrascuenta.Enabled = false;
+            this.txtletrascuenta.Location = new System.Drawing.Point(431, 54);
+            this.txtletrascuenta.Name = "txtletrascuenta";
+            this.txtletrascuenta.Size = new System.Drawing.Size(48, 20);
+            this.txtletrascuenta.TabIndex = 12;
+            this.txtletrascuenta.TextChanged += new System.EventHandler(this.txtletrascuenta_TextChanged);
             // 
             // txtmontocuenta
             // 
@@ -245,6 +249,13 @@
             this.cmbsucursal.Size = new System.Drawing.Size(134, 21);
             this.cmbsucursal.TabIndex = 15;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(485, 54);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(101, 20);
+            this.textBox1.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +267,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Ejercicio1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcuentas)).EndInit();
@@ -277,7 +289,7 @@
         private System.Windows.Forms.ComboBox cmbsucursal;
         private System.Windows.Forms.ComboBox cmbtcuenta;
         private System.Windows.Forms.TextBox txtmontocuenta;
-        private System.Windows.Forms.TextBox txtncuenta;
+        private System.Windows.Forms.TextBox txtletrascuenta;
         private System.Windows.Forms.TextBox txtnit;
         private System.Windows.Forms.TextBox txtapellidos;
         private System.Windows.Forms.TextBox txtnombres;
@@ -285,6 +297,7 @@
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.DataGridView dgvcuentas;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
